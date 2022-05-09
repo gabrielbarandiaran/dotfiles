@@ -86,6 +86,9 @@ return packer.startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
 
+  -- Tagbar
+  use "majutsushi/tagbar"
+
   -- Vimspector
   use 'puremourning/vimspector'
 

@@ -184,6 +184,11 @@ _G.packer_plugins = {
     path = "/Users/barandiaran/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  tagbar = {
+    loaded = true,
+    path = "/Users/barandiaran/.local/share/nvim/site/pack/packer/start/tagbar",
+    url = "https://github.com/majutsushi/tagbar"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/barandiaran/.local/share/nvim/site/pack/packer/start/telescope.nvim",

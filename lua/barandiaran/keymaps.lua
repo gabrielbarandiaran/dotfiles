@@ -13,7 +13,7 @@ vim.g.maplocalleader = " "
 ---------- GENERAL ----------
 
 -- Update vim configuration
-keymap("n", "<leader>rec", ":source $HOME/.config/nvim/init.lua", opts)
+keymap("n", "<leader>rec", ":source $HOME/.config/nvim/init.lua<CR>", opts)
 
 -- Improve command key
 keymap("n", ";", ":", { noremap = true, silent = false })
@@ -38,7 +38,7 @@ keymap("n", "<down>", "<C-w><down>", opts)
 keymap("n", "<left>", "<C-w><left>", opts)
 keymap("n", "<right>", "<C-w><right>", opts)
 
--- Move split tabs 
+-- Move split tabs
 keymap("n", "A-Left", ":tabm -1<CR>", opts)
 keymap("n", "A-Right", ":tabm +1<CR>", opts)
 
@@ -69,6 +69,13 @@ keymap("v", ">", ">gv", opts)
 
 ---------- PLUGINS ----------
 
+-- LSP
+keymap("n", "<C-Space>", ":lua require('barandiaran.plugins.lsp.quickfix')()<CR>", opts)
+
 -- Telescope
 keymap("n", "<C-p>", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-keymap("n", "<C-t>", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<C-t>", "<cmd>Telescope live_grep<CR>", opts)
+
+-- Tagbar
+keymap("n", "<F8>", ":TagbarToggle<CR>", opts)
+
