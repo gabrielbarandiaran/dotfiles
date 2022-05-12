@@ -70,6 +70,9 @@ keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>tg", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>td", ":Telescope diagnostics<CR>", opts)
 
+-- Fugitive
+keymap("n", "<C-g>", ":Ge:<CR>", opts)
+
 -- Tagbar
 keymap("n", "<F8>", ":TagbarToggle<CR>", opts)
 

@@ -85,6 +85,7 @@ return packer.startup(function(use)
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+  use "tpope/vim-fugitive"
 
   -- Tagbar
   use "majutsushi/tagbar"
