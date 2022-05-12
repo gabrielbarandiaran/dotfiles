@@ -44,14 +44,14 @@ return packer.startup(function(use)
   -- General
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "nvim-lua/plenary.nvim" -- Useful lua functions
   use "windwp/nvim-autopairs" -- Bracket autopair
   use "numToStr/Comment.nvim" -- Easily comment stuff
-  use 'kyazdani42/nvim-web-devicons'
-  use 'kyazdani42/nvim-tree.lua'
+  use "kyazdani42/nvim-web-devicons"
+  use "kyazdani42/nvim-tree.lua"
   use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    "nvim-lualine/lualine.nvim",
+    requires = { "kyazdani42/nvim-web-devicons", opt = true }
   }
   use "akinsho/toggleterm.nvim"
 
@@ -81,7 +81,7 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "p00f/nvim-ts-rainbow"
-  use 'JoosepAlviste/nvim-ts-context-commentstring'
+  use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Git
   use "lewis6991/gitsigns.nvim"
@@ -90,7 +90,10 @@ return packer.startup(function(use)
   use "majutsushi/tagbar"
 
   -- Vimspector
-  use 'puremourning/vimspector'
+  use "puremourning/vimspector"
+
+  -- vim-visual-multi
+  use "mg979/vim-visual-multi"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

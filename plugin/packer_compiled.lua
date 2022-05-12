@@ -199,6 +199,11 @@ _G.packer_plugins = {
     path = "/Users/barandiaran/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
+  ["vim-visual-multi"] = {
+    loaded = true,
+    path = "/Users/barandiaran/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
+    url = "https://github.com/mg979/vim-visual-multi"
+  },
   vimspector = {
     loaded = true,
     path = "/Users/barandiaran/.local/share/nvim/site/pack/packer/start/vimspector",

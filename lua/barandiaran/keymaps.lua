@@ -3,7 +3,7 @@ local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
 
 -- Shorten function name
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 
 -- Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
@@ -29,22 +29,14 @@ keymap("n", "<Tab>", ":NvimTreeToggle<CR>", opts)
 ---------- TAB MANAGEMENT ----------
 
 -- Move between tabs
-keymap("n", "C-Right", ":tabprevious<CR>", opts)
-keymap("n", "C-Left", ":tabnext<CR>", opts)
+keymap("n", "<C-Right>", ":tabprevious<CR>", opts)
+keymap("n", "<C-Left>", ":tabnext<CR>", opts)
 
 -- Move between split tabs
 keymap("n", "<up>", "<C-w><up>", opts)
 keymap("n", "<down>", "<C-w><down>", opts)
 keymap("n", "<left>", "<C-w><left>", opts)
 keymap("n", "<right>", "<C-w><right>", opts)
-
--- Move split tabs
-keymap("n", "A-Left", ":tabm -1<CR>", opts)
-keymap("n", "A-Right", ":tabm +1<CR>", opts)
-
--- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 ---------- TEXT MANIPULATION ----------
 
@@ -70,11 +62,13 @@ keymap("v", ">", ">gv", opts)
 ---------- PLUGINS ----------
 
 -- LSP
-keymap("n", "<C-Space>", ":lua require('barandiaran.plugins.lsp.quickfix')()<CR>", opts)
+keymap("n", "<C-Space>", ":lua vim.lsp.buf.code_action()<CR>")
+keymap("n", "<C-d>", ":lua vim.lsp.buf.rename()<CR>")
 
 -- Telescope
-keymap("n", "<C-p>", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-keymap("n", "<C-t>", "<cmd>Telescope live_grep<CR>", opts)
+keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
+keymap("n", "<leader>tg", ":Telescope live_grep<CR>", opts)
+keymap("n", "<leader>td", ":Telescope diagnostics<CR>", opts)
 
 -- Tagbar
 keymap("n", "<F8>", ":TagbarToggle<CR>", opts)
