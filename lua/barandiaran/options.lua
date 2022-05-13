@@ -38,7 +38,8 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
-vim.cmd "colorscheme gruvbox8_hard"
+vim.cmd "colorscheme vimSolarized"
+vim.cmd "hi Normal ctermbg=NONE guibg=NONE"
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd "set wildignore+=*.pyc,*_build/*,**/coverage/*,**/node_modules/*,**/.git/*"
 vim.cmd [[set iskeyword+=-]]
