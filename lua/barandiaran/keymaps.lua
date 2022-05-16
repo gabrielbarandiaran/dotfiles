@@ -26,11 +26,15 @@ keymap("n", "J", "mzJ`z", opts)
 
 keymap("n", "<Tab>", ":NvimTreeToggle<CR>", opts)
 
+-- Save file by CTRL-S
+keymap("n", "<C-s>", ":w<CR>", opts)
+keymap("i", "<C-s>", "<ESC> :w<CR>", opts)
+
 ---------- TAB MANAGEMENT ----------
 
 -- Move between tabs
-keymap("n", "<C-Right>", ":tabprevious<CR>", opts)
-keymap("n", "<C-Left>", ":tabnext<CR>", opts)
+keymap("n", "<C-j>", ":tabprevious<CR>", opts)
+keymap("n", "<C-l>", ":tabnext<CR>", opts)
 
 -- Move between split tabs
 keymap("n", "<up>", "<C-w><up>", opts)
@@ -64,6 +68,7 @@ keymap("v", ">", ">gv", opts)
 -- LSP
 keymap("n", "<C-Space>", ":lua vim.lsp.buf.code_action()<CR>")
 keymap("n", "<C-d>", ":lua vim.lsp.buf.rename()<CR>")
+keymap("n", "<leader>ft", ":lua vim.lsp.buf.format()<CR>")
 
 -- Telescope
 keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
@@ -71,7 +76,7 @@ keymap("n", "<leader>tg", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>td", ":Telescope diagnostics<CR>", opts)
 
 -- Fugitive
-keymap("n", "<C-g>", ":Ge:<CR>", opts)
+keymap("n", "<C-g>", ":Gtabedit :<CR>", opts)
 
 -- Tagbar
 keymap("n", "<F8>", ":TagbarToggle<CR>", opts)

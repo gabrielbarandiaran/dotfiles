@@ -82,6 +82,10 @@ return packer.startup(function(use)
   }
   use "p00f/nvim-ts-rainbow"
   use "JoosepAlviste/nvim-ts-context-commentstring"
+  use "windwp/nvim-ts-autotag"
+
+  -- typescript
+  use { 'jose-elias-alvarez/typescript.nvim' }
 
   -- Git
   use "lewis6991/gitsigns.nvim"
@@ -95,6 +99,9 @@ return packer.startup(function(use)
 
   -- vim-visual-multi
   use "mg979/vim-visual-multi"
+
+  -- ayu
+  use "shatur/neovim-ayu"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
