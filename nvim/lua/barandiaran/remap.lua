@@ -7,6 +7,16 @@ keymap("n", "<leader>pv", vim.cmd.Ex)
 -- Move text in visual mode (up/down)
 keymap("v", "K", ":m '<-2<CR>gv=gv")
 
+-- Move between split panes 
+keymap("n", "<Up>", ":wincmd k<CR>")
+keymap("n", "<Down>", ":wincmd j<CR>")
+keymap("n", "<Left>", ":wincmd h<CR>")
+keymap("n", "<Right>", ":wincmd l<CR>")
+
+-- Move between tabs 
+keymap("n", "<C-l>", ":tabnext<CR>")
+keymap("n", "<C-j>", ":tabprevious<CR>")
+
 -- Makes cursor stay in the middle (page jump/search jump)
 keymap("n", "J", "mzJ`z")
 keymap("n", "<C-d>", "<C-d>zz")
@@ -29,11 +39,8 @@ keymap({ "n", "v" }, "<leader>d", [["_d]])
 keymap("n", "Q", "<nop>")
 -- Switch between tmux session 
 keymap("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
--- 
 keymap("n", "<leader>f", vim.lsp.buf.format)
 
-keymap("n", "<C-k>", "<cmd>cnext<CR>zz")
-keymap("n", "<C-j>", "<cmd>cprev<CR>zz")
 keymap("n", "<leader>k", "<cmd>lnext<CR>zz")
 keymap("n", "<leader>j", "<cmd>lprev<CR>zz")
 
