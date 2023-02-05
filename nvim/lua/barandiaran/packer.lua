@@ -9,11 +9,9 @@ return require('packer').startup(function(use)
 	}
 
 	use({
-		'rose-pine/neovim',
-		as = 'rose-pine',
+		'shatur/neovim-ayu',
 		config = function()
-			require("rose-pine").setup()
-			vim.cmd('colorscheme rose-pine')
+			vim.cmd('colorscheme ayu-dark')
 		end
 	})
 
@@ -40,6 +38,18 @@ return require('packer').startup(function(use)
 			{ 'L3MON4D3/LuaSnip' }, -- Required
 			{ 'rafamadriz/friendly-snippets' }, -- Optional
 		}
+	}
+	use({
+		"glepnir/lspsaga.nvim",
+		branch = "main",
+		requires = { { "nvim-tree/nvim-web-devicons" } }
+	})
+	use {
+		'nvim-tree/nvim-tree.lua',
+		requires = {
+			'nvim-tree/nvim-web-devicons', -- optional, for file icons
+		},
+		tag = 'nightly' -- optional, updated every week. (see issue #1193)
 	}
 	use {
 		"windwp/nvim-autopairs",

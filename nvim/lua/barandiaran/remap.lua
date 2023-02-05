@@ -47,3 +47,33 @@ keymap("n", "<leader>j", "<cmd>lprev<CR>zz")
 -- Replace current word
 keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 keymap("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+-----------------------
+--      PLUGINS      --
+-----------------------
+
+-- DAP
+keymap("n", "<F5>", ":lua require'dap'.continue()<CR>")
+keymap("n", "<F10>", ":lua require'dap'.step_over()<CR>")
+keymap("n", "<F11>", ":lua require'dap'.step_into()<CR>")
+keymap("n", "<F12>", ":lua require'dap'.step_out()<CR>")
+keymap("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>")
+
+-- nvim-tree
+keymap("n", "<Tab>", ":NvimTreeToggle<CR>")
+
+-- LSP-Saga
+keymap("n", "<leader>lfn", "<cmd>Lspsaga lsp_finder<CR>")
+keymap("n", "gr", "<cmd>Lspsaga rename<CR>")
+keymap("n", "<leader>lpd", "<cmd>Lspsaga peek_definition<CR>")
+keymap("n","<leader>lgd", "<cmd>Lspsaga goto_definition<CR>")
+keymap("n", "<leader>ld", "<cmd>Lspsaga show_line_diagnostics<CR>")
+keymap("n", "<leader>sb", "<cmd>Lspsaga show_buf_diagnostics<CR>")
+keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
+keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>")
+keymap("n","<leader>o", "<cmd>Lspsaga outline<CR>")
+keymap({"n", "t"}, "<A-d>", "<cmd>Lspsaga term_toggle<CR>")
+
+-- Fugitive
+keymap("n", "<leader>gs", vim.cmd.Git)
+keymap("n", "<leader>gp", ":Git push<CR>")
