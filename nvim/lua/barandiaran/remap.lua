@@ -76,4 +76,14 @@ keymap({"n", "t"}, "<A-d>", "<cmd>Lspsaga term_toggle<CR>")
 
 -- Fugitive
 keymap("n", "<leader>gs", vim.cmd.Git)
-keymap("n", "<leader>gp", ":Git push<CR>")
+keymap("n", "<leader>gps", ":Git push<CR>")
+keymap("n", "<leader>gpl", ":Git pull<CR>")
+keymap("n", "<leader>gc", ":Git commit<CR>")
+
+-- Telescope
+local telescopeBuiltin = require('telescope.builtin')
+keymap('n', '<leader>tff', telescopeBuiltin.find_files, {})
+keymap('n', '<C-p>', telescopeBuiltin.git_files, {})
+keymap('n', '<leader>tlg', telescopeBuiltin.live_grep)
+keymap('n', '<leader>td', telescopeBuiltin.diagnostics)
+keymap('n', '<leader>tld', telescopeBuiltin.lsp_definitions)
