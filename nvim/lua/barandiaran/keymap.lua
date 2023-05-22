@@ -7,16 +7,6 @@ keymap("n", "<C-j>", "<C-w>j")
 keymap("n", "<C-k>", "<C-w>k")
 keymap("n", "<C-l>", "<C-w>l")
 
-keymap("i", "(<Space>", "()<Left>")
-keymap("i", "(;", "(<CR>);<C-c>O")
-keymap("i", "(,", "(<CR>),<C-c>O")
-keymap("i", "{<Space>", "{}<Left>")
-keymap("i", "{;", "{<CR>};<C-c>O")
-keymap("i", "{,", "{<CR>};<C-c>O")
-keymap("i", "[<Space>", "[]<Left>")
-keymap("i", "[;", "[<CR>];<C-c>O")
-keymap("i", "[,", "[<CR>],<C-c>O")
-
 keymap("v", "J", ":m '>+1<CR>gv=gv")
 keymap("v", "K", ":m '<-2<CR>gv=gv")
 
