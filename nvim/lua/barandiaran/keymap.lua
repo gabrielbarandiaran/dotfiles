@@ -15,4 +15,7 @@ keymap("n", "<A-j>", "<cmd>cprev<CR>zz")
 keymap("n", "<leader>k", "<cmd>lnext<CR>zz")
 keymap("n", "<leader>j", "<cmd>lprev<CR>zz")
 
+keymap("n", "<Tab>", "<cmd>tabnext<CR>")
+keymap("n", "<S-Tab>", "<cmd>tabprev<CR>")
+
 keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
